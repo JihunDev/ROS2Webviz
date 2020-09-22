@@ -1,0 +1,13 @@
+<launch>
+
+	<arg name="path" default="/home/" />
+	<arg name="path2" default="webviz2RosBridge/bagFile/" />
+	<arg name="file" default="fileName" />
+	
+	<node pkg="rosbag" type="play" name="player" args="-l $(arg path)$(arg path2)$(arg file).bag" />
+	
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+		<arg name="port" value="9090" />
+	</include>
+
+</launch>
