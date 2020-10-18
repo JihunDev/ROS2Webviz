@@ -1,2 +1,2 @@
-echo pip install tornado
-echo python -m pip install pymongo
+pip install tornado
+python -m pip install pymongo
